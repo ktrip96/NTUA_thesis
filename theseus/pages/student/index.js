@@ -1,12 +1,12 @@
+import Logo from '../components/Logo'
+import ProfileImage from '../components/ProfileImage'
 import classes from './index.module.css'
 
 function StudentHome() {
   return (
-    <div className={classes.main_container}>
-      <h1>This is the Students page</h1>
-      {/* Logo */}
-
-      {/* Profile Info - Sign Out Button*/}
+    <div>
+      {/* <Logo /> */}
+      {/* <ProfileImage /> */}
 
       {/* Search Button */}
 
