@@ -1,14 +1,15 @@
 import Logo from '../components/Logo'
 import ProfileImage from '../components/ProfileImage'
-import classes from './index.module.css'
+import SearchBar from '../components/SearchBar'
+import styles from './index.module.css'
 
 function StudentHome() {
   return (
-    <div>
-      {/* <Logo /> */}
-      {/* <ProfileImage /> */}
+    <div className={styles.main_ctn}>
+      {/* <Logo />
+      <ProfileImage /> */}
 
-      {/* Search Button */}
+      {/* <SearchBar /> */}
 
       {/* Menu FlexBox */}
 

@@ -1,0 +1,9 @@
+.search_ctn {
+  width: 40%;
+}
+
+@media (max-width: 425px) {
+  .search_ctn {
+    width: 90%;
+  }
+}
