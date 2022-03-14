@@ -2,6 +2,16 @@ import { Button } from '@chakra-ui/react'
 import styles from './ProjectInfo.module.css'
 
 function ProjectInfo() {
+  const pathColorizer = {
+    electronics: { color: '#fe7c7c' },
+    software: { color: '#7e9af6' },
+    communications: { color: '#f4a65e' },
+    energy: { color: '#9bde90' },
+  }
+
+  const returnStyling = (path) => ({
+    backgroundColor: pathColorizer[path].color,
+  })
   return (
     <div className={styles.project_ctn}>
       {/* Τίτλος */}
@@ -18,7 +28,21 @@ function ProjectInfo() {
       {/* Συσχετιζόμενο Μάθημα */}
       <h1 className={styles.title}>Συσχετιζόμενο μάθημα</h1>
       <div className={styles.lesson_ctn}>
-        <p className={styles.txt}>Τεχνολογία Λογισμικού</p>
+        <p
+          className={styles.txt}
+          style={{
+            marginTop: '0.5rem',
+            paddingTop: '8px',
+            borderRadius: '10px',
+            color: 'white',
+            width: '200px',
+            height: '40px',
+            textAlign: 'center',
+            backgroundColor: `${returnStyling('software').backgroundColor}`,
+          }}
+        >
+          Τεχνολογία Λογισμικού
+        </p>
       </div>
       {/* Περιγραφή */}
       <h1 className={styles.title}>Περιγραφή</h1>
