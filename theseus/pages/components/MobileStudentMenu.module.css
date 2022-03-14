@@ -1,0 +1,40 @@
+.menu_ctn {
+  display: flex;
+}
+
+.menu_box_selected {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu_box_selected::after {
+  content: '';
+  width: 95%;
+  height: 10px;
+  display: inline-block;
+  background: #5e81f4;
+  border-radius: 10px;
+}
+
+.menu_box_default {
+  font-size: 20px;
+  color: #888888;
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 425px) {
+  .menu_box_selected,
+  .menu_box_default {
+    font-size: 4vw;
+    padding: 0.2rem;
+  }
+
+  .menu_box_selected::after {
+    height: 1.5vw;
+  }
+}
