@@ -1,6 +1,7 @@
 import Logo from '../components/Logo'
 import MobileStudentMenu from '../components/MobileStudentMenu'
 import ProfileImage from '../components/ProfileImage'
+import ApplicationBox from '../components/ApplicationBox'
 import ProjectBox from '../components/ProjectBox'
 import ProjectInfo from '../components/ProjectInfo'
 import SearchBar from '../components/SearchBar'
@@ -20,9 +21,9 @@ function StudentHome() {
       {/* <ProjectBox />
       <ProjectBox />
       <ProjectBox /> */}
-      <ProjectInfo />
+      {/* <ProjectInfo /> */}
       {/* Οι αιτήσεις μου */}
-
+      <ApplicationBox />
       {/* Η διπλωματική μου */}
     </div>
   )

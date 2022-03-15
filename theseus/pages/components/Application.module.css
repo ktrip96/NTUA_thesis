@@ -1,0 +1,26 @@
+.application_ctn {
+  display: flex;
+}
+
+.icon_ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 250px;
+  flex-grow: 1;
+  font-size: 1rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #908f8f;
+}
+
+@media (max-width: 425px) {
+  .content {
+    font-size: 3.5vw;
+  }
+}
