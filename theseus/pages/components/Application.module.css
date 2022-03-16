@@ -19,8 +19,25 @@
   color: #908f8f;
 }
 
+.border_bottom {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5px;
+}
+.border_bottom::after {
+  content: '';
+  width: 95%;
+  height: 1px;
+  display: inline-block;
+  background: lightgray;
+  border-radius: 10px;
+}
+
 @media (max-width: 425px) {
   .content {
     font-size: 3.5vw;
+  }
+  .border_bottom {
+    width: 90%;
   }
 }

@@ -7,9 +7,23 @@ function SearchBar() {
     <div className={styles.search_ctn}>
       <InputGroup>
         <InputLeftElement pointerEvents='none'>
-          <FiSearch />
+          <FiSearch
+            style={{
+              height: '30px',
+              width: '30px',
+              color: '#888888',
+              marginLeft: '10px',
+              marginRight: '10px',
+              marginTop: '5px',
+            }}
+          />
         </InputLeftElement>
-        <Input type='tel' placeholder='Αναζήτηση' size='md' />
+        <Input
+          type='tel'
+          placeholder='Αναζήτηση'
+          size='lg'
+          style={{ paddingLeft: '50px' }}
+        />
       </InputGroup>
     </div>
   )

@@ -1,5 +1,13 @@
 .menu_ctn {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 30px;
+}
+.menu_box {
+  width: 160px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .menu_box_selected {
@@ -8,12 +16,13 @@
   padding: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .menu_box_selected::after {
   content: '';
-  width: 95%;
-  height: 10px;
+  width: 70%;
+  height: 6px;
   display: inline-block;
   background: #5e81f4;
   border-radius: 10px;
@@ -25,6 +34,12 @@
   padding: 0.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu_box_default:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 425px) {

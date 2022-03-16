@@ -10,20 +10,28 @@ import styles from './index.module.css'
 function StudentHome() {
   return (
     <div className={styles.main_ctn}>
-      {/* <Logo /> */}
-      {/* <ProfileImage /> */}
+      <div className={styles.header}>
+        <Logo />
+        <div style={{ flexGrow: 1 }}></div>
+        <ProfileImage />
+      </div>
 
-      {/* <SearchBar /> */}
+      <div className={styles.search}>
+        <SearchBar />
+      </div>
 
-      {/* <MobileStudentMenu /> */}
+      <div className={styles.menu}>
+        <MobileStudentMenu />
+      </div>
       {/* Όλες οι διπλωματικές */}
-
-      {/* <ProjectBox />
-      <ProjectBox />
-      <ProjectBox /> */}
+      <div className={styles.project_ctn}>
+        <ProjectBox />
+        <ProjectBox />
+        <ProjectBox />
+      </div>
       {/* <ProjectInfo /> */}
       {/* Οι αιτήσεις μου */}
-      <ApplicationBox />
+      {/* <ApplicationBox /> */}
       {/* Η διπλωματική μου */}
     </div>
   )
