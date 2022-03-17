@@ -25,9 +25,36 @@ function StudentHome() {
       </div>
       {/* Όλες οι διπλωματικές */}
       <div className={styles.project_ctn}>
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
+        <ProjectBox
+          path='energy'
+          teacher='Παναγιώτης Τσανάκας'
+          name='Theseus Project'
+        />
+        <ProjectBox
+          path='software'
+          teacher='Νίκος Παπασπύρου'
+          name='Random Project'
+        />
+        <ProjectBox
+          path='communications'
+          teacher='Βασίλης Βεσκούκης'
+          name='Telecommunications '
+        />
+        <ProjectBox
+          path='electronics'
+          teacher='Γιώργος Σιόλας'
+          name='Artificial Intelligence'
+        />
+        <ProjectBox
+          path='energy'
+          teacher='Παναγιώτης Τσανάκας'
+          name='Theseus Project'
+        />
+        <ProjectBox
+          path='communications'
+          teacher='Βασίλης Βεσκούκης'
+          name='Telecommunications '
+        />
       </div>
       {/* <ProjectInfo /> */}
       {/* Οι αιτήσεις μου */}

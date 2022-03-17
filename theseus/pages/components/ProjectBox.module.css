@@ -20,8 +20,8 @@
 }
 
 .logo_box {
-  height: 3.15rem;
-  width: 3.35rem;
+  height: 3rem;
+  width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,21 +38,25 @@
 
 .logo_ltr {
   color: white;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 @media (max-width: 425px) {
   .logo_ltr {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 
   .box_ctn {
-    padding-left: 0.5rem;
+    padding-left: 1.1rem;
+  }
+
+  .title {
+    max-width: 150px;
   }
 }
 
 .title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   font-family: 'Manrope';
   color: #000;
@@ -79,4 +83,5 @@
 .gray_color {
   color: #807f7f;
   font-weight: 600;
+  font-size: 13px;
 }
