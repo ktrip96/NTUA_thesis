@@ -1,9 +1,6 @@
 import styles from './MobileStudentMenu.module.css'
-import { useState } from 'react'
 
-function MobileStudentMenu() {
-  const [isActive, setIsActive] = useState(1)
-
+function MobileStudentMenu({ isActive, setIsActive }) {
   return (
     <div className={styles.menu_ctn}>
       <div onClick={() => setIsActive(1)}>

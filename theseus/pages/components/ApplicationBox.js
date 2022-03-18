@@ -1,5 +1,5 @@
-import Application from './Application'
 import styles from './ApplicationBox.module.css'
+import ApplicationList from './ApplicationList'
 
 function ApplicationBox() {
   return (
@@ -9,9 +9,7 @@ function ApplicationBox() {
         <h1 className={styles.title}>Καθηγητής</h1>
         <h1 className={styles.title}>Κατάσταση</h1>
       </div>
-      <Application name='Παναγιώτης Τσανάκας' />
-      <Application name='Νίκος Νίκος' />
-      <Application name='Βασίλης  Παπαβασιλακόπουλος' />
+      <ApplicationList />
     </div>
   )
 }
