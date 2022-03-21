@@ -1,7 +1,10 @@
 import { Button } from '@chakra-ui/react'
 import styles from './ProjectInfo.module.css'
+import { getProjectById } from '../../dummy_data'
 
-function ProjectInfo() {
+function ProjectInfo({ projectId }) {
+  // pathColorizer connects path value with box color
+
   const pathColorizer = {
     electronics: { color: '#fe7c7c' },
     software: { color: '#7e9af6' },
@@ -9,21 +12,29 @@ function ProjectInfo() {
     energy: { color: '#9bde90' },
   }
 
+  // returnStyling returns the CSS object with the correct background color
+
   const returnStyling = (path) => ({
     backgroundColor: pathColorizer[path].color,
   })
+
+  const project = getProjectById(projectId)
+  // console.log('project is:', project)
+
+  if (project === undefined) return <h1>Loading</h1>
+
   return (
     <div className={styles.project_ctn}>
       {/* Τίτλος */}
       <h1 className={styles.title}>Τίτλος</h1>
-      <p className={styles.txt}>Δημιουργία πλατφόρμας κοινωνικού δικτύου</p>
+      <p className={styles.txt}>{project.title}</p>
       {/* Αναγνωριστικό Διπλωματικής */}
       <h1 className={styles.title}>Αναγνωριστικό Διπλωματικής</h1>
-      <p className={styles.txt}>L04328947</p>
+      <p className={styles.txt}>{project.id}</p>
 
       {/* Επιβλέπων */}
       <h1 className={styles.title}>Επιβλέπων</h1>
-      <p className={styles.txt}>Παναγιώτης Τσανάκας</p>
+      <p className={styles.txt}>{project.teacher}</p>
 
       {/* Συσχετιζόμενο Μάθημα */}
       <h1 className={styles.title}>Συσχετιζόμενο μάθημα</h1>
@@ -38,10 +49,10 @@ function ProjectInfo() {
             width: '200px',
             height: '40px',
             textAlign: 'center',
-            backgroundColor: `${returnStyling('software').backgroundColor}`,
+            backgroundColor: `${returnStyling(project.path).backgroundColor}`,
           }}
         >
-          Τεχνολογία Λογισμικού
+          {project.lesson}
         </p>
       </div>
       {/* Περιγραφή */}

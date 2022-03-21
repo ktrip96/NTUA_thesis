@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import MobileStudentMenu from '../components/MobileStudentMenu'
-import ProjectInfo from '../components/ProjectInfo'
 import SearchBar from '../components/SearchBar'
 import styles from './index.module.css'
 import Header from '../components/Header'
@@ -10,7 +9,8 @@ import ApplicationBox from '../components/ApplicationBox'
 function conditionalRender(isActive) {
   if (isActive === 1) return <ProjectList />
   if (isActive === 2) return <ApplicationBox />
-  if (isActive === 3) return <h1>3. Hello world</h1>
+  if (isActive === 3)
+    return <h1>Εδώ θα μπεί το progress και τα tasks της διπλωματικής </h1>
 }
 
 function StudentHome() {
@@ -28,7 +28,7 @@ function StudentHome() {
       </div>
 
       {conditionalRender(isActive)}
-      {/* <ProjectInfo /> */}
+
       {/* Οι αιτήσεις μου */}
 
       {/* Η διπλωματική μου */}
