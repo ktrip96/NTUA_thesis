@@ -21,7 +21,7 @@ function ProjectInfo({ projectId }) {
   const project = getProjectById(projectId)
   // console.log('project is:', project)
 
-  if (project === undefined) return <h1>Loading</h1>
+  if (project === undefined) return <h1>Loading Gif</h1>
 
   return (
     <div className={styles.project_ctn}>
@@ -57,27 +57,14 @@ function ProjectInfo({ projectId }) {
       </div>
       {/* Περιγραφή */}
       <h1 className={styles.title}>Περιγραφή</h1>
-      <p className={styles.txt}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
+      <p className={styles.txt}>{project.description}</p>
 
       {/* Στόχοι */}
       <h1 className={styles.title}>Στόχοι</h1>
-      <p className={styles.txt}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <p className={styles.txt}>{project.goals}</p>
       {/* Προτεινόμενη Βιβλιογραφία */}
       <h1 className={styles.title}>Προτεινόμενη Βιβλιογραφία</h1>
-      <p className={styles.txt}>[1].NextJS, the official handbook</p>
+      <p className={styles.txt}>{project.bibliography}</p>
       {/* Προαπαιτούμενα */}
       <h1 className={styles.title}>Προαπαιτούμενα</h1>
       <ul className={styles.txt}>
@@ -87,7 +74,7 @@ function ProjectInfo({ projectId }) {
       </ul>
       {/* Επικοινωνία */}
       <h1 className={styles.title}>Επικοινωνία</h1>
-      <p className={styles.txt}>ktrip96@gmail.com</p>
+      <p className={styles.txt}>{project.communication}</p>
       <Button colorScheme='blue' width='200px' className={styles.test}>
         Αίτηση
       </Button>
