@@ -1,6 +1,7 @@
 import { Button } from '@chakra-ui/react'
 import styles from './ProjectInfo.module.css'
 import { getProjectById } from '../../dummy_data'
+import Loading from './Loading'
 
 function ProjectInfo({ projectId }) {
   // pathColorizer connects path value with box color
@@ -20,7 +21,7 @@ function ProjectInfo({ projectId }) {
 
   const project = getProjectById(projectId)
 
-  if (!project) return <h1>No event found</h1>
+  if (!project) return <Loading />
 
   return (
     <div className={styles.project_ctn}>

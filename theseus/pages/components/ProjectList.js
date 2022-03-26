@@ -1,3 +1,4 @@
+import Loading from './Loading'
 import ProjectBox from './ProjectBox'
 import styles from './ProjectList.module.css'
 
