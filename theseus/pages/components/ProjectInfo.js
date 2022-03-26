@@ -19,9 +19,8 @@ function ProjectInfo({ projectId }) {
   })
 
   const project = getProjectById(projectId)
-  // console.log('project is:', project)
 
-  if (project === undefined) return <h1>Loading Gif</h1>
+  if (!project) return <h1>No event found</h1>
 
   return (
     <div className={styles.project_ctn}>
@@ -68,9 +67,9 @@ function ProjectInfo({ projectId }) {
       {/* Προαπαιτούμενα */}
       <h1 className={styles.title}>Προαπαιτούμενα</h1>
       <ul className={styles.txt}>
-        <li>Python 1.0</li>
-        <li>Python 2.0</li>
-        <li>Python 3.0</li>
+        {project.prequisites.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
       </ul>
       {/* Επικοινωνία */}
       <h1 className={styles.title}>Επικοινωνία</h1>
