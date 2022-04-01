@@ -2,7 +2,11 @@ import { FiSearch } from 'react-icons/fi'
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import styles from './SearchBar.module.css'
 
-function SearchBar() {
+function SearchBar({ setSearchField }) {
+  const handleChange = (e) => {
+    setSearchField(e.target.value)
+  }
+
   return (
     <div className={styles.search_ctn}>
       <InputGroup>
@@ -23,6 +27,7 @@ function SearchBar() {
           placeholder='Αναζήτηση'
           size='lg'
           style={{ paddingLeft: '50px' }}
+          onChange={handleChange}
         />
       </InputGroup>
     </div>

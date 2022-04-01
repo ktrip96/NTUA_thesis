@@ -22,6 +22,117 @@ const USER_DATA = [
   },
 ]
 
+const DEVELOPING_DATA = [
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328948',
+  },
+  {
+    path: 'energy',
+    teacher: 'Παναγιώτης Τσανάκας',
+    name: 'Theseus Project',
+    id: 'L04328948',
+  },
+  {
+    path: 'communications',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    id: 'L04328947',
+  },
+  {
+    path: 'electronics',
+    teacher: 'Γιώργιος Σιόλας',
+    name: 'Artificial Intelligence',
+    id: 'L04328947',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328946',
+  },
+  {
+    path: 'communications',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    id: 'L04328946',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328948',
+  },
+  {
+    path: 'energy',
+    teacher: 'Παναγιώτης Τσανάκας',
+    name: 'Theseus Project',
+    id: 'L04328948',
+  },
+  {
+    path: 'communications',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    id: 'L04328947',
+  },
+  {
+    path: 'electronics',
+    teacher: 'Γιώργιος Σιόλας',
+    name: 'Artificial Intelligence',
+    id: 'L04328947',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328946',
+  },
+  {
+    path: 'communications',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    id: 'L04328946',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328948',
+  },
+  {
+    path: 'energy',
+    teacher: 'Παναγιώτης Τσανάκας',
+    name: 'Theseus Project',
+    id: 'L04328948',
+  },
+  {
+    path: 'communications',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    id: 'L04328947',
+  },
+  {
+    path: 'electronics',
+    teacher: 'Γιώργιος Σιόλας',
+    name: 'Artificial Intelligence',
+    id: 'L04328947',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328946',
+  },
+  {
+    path: 'communications',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    id: 'L04328946',
+  },
+]
+
 const PROJECT_DATA = [
   {
     id: 'L04328947',
@@ -82,6 +193,10 @@ const ASSIGN_DATA = [
 
 export function getProjects() {
   return PROJECT_DATA
+}
+
+export function getSearchbarData() {
+  return DEVELOPING_DATA
 }
 
 export function getProjectById(id) {
