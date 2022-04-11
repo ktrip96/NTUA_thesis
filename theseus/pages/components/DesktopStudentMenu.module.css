@@ -1,0 +1,28 @@
+
+.menu_box{
+    display: flex;
+    border:2px solid green;
+    align-items: center;
+}
+
+.menu_box::after{
+    content: '';
+    width: 4px;
+    height: 25px;
+    margin-left:auto;
+    display: inline-block;
+    background: #5e81f4;
+    border-radius: 10px;
+}
+
+.menu_title{
+    font-family: Manrope;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.menu_icon{
+    height:30px;
+    width:30px;
+    margin-right: 30px;
+}

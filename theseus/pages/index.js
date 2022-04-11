@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import DesktopStudentMenu from './components/DesktopStudentMenu'
 
 export default function Home() {
   return (
@@ -9,6 +10,10 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <h1>This is the Log in page</h1>
+
+      <div style={{ border: '2px solid red', width: '300px', height: '100vh' }}>
+        <DesktopStudentMenu />
+      </div>
     </div>
   )
 }
