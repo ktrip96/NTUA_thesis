@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MobileStudentMenu from '../components/MobileStudentMenu'
+import MobileStudentMenu from '../components/student/MobileStudentMenu'
 import SearchBar from '../components/SearchBar'
 import styles from './index.module.css'
 import Header from '../components/Header'
@@ -31,7 +31,7 @@ function StudentHome() {
 
   return (
     <div className={styles.main_ctn}>
-      <Header />
+      <Header category={'student'} />
 
       <div className={styles.search}>
         <SearchBar setSearchField={setSearchField} />
@@ -42,10 +42,6 @@ function StudentHome() {
       </div>
 
       {conditionalRender(isActive)}
-
-      {/* Οι αιτήσεις μου */}
-
-      {/* Η διπλωματική μου */}
     </div>
   )
 }
