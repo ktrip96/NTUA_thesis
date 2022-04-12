@@ -6,6 +6,7 @@ import SearchBar from '../components/SearchBar'
 import ProjectList from '../components/ProjectList'
 import { getTeacherData } from '../../dummy_data'
 import TeacherProjectBox from '../components/teacher/TeacherProjectBox'
+import FilterMenu from '../components/teacher/FilterMenu'
 
 function TeacherHome() {
   const [isActive, setIsActive] = useState(1)
@@ -45,7 +46,7 @@ function TeacherHome() {
           category={'teacher'}
         />
       </div>
-
+      <FilterMenu />
       {conditionalRender(isActive)}
     </div>
   )
