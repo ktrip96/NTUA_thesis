@@ -1,7 +1,7 @@
-import styles from './ProjectBox.module.css'
+import styles from './StudentProjectBox.module.css'
 import { HiChevronRight } from 'react-icons/hi'
 import Link from 'next/link'
-function ProjectBox({ path, name, teacher, id }) {
+function StudentProjectBox({ path, name, teacher, id }) {
   const pathColorizer = {
     electronics: { color: '#fe7c7c', letter: 'Η' },
     software: { color: '#7e9af6', letter: 'Π' },
@@ -34,4 +34,4 @@ function ProjectBox({ path, name, teacher, id }) {
   )
 }
 
-export default ProjectBox
+export default StudentProjectBox

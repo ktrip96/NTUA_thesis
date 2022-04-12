@@ -191,12 +191,75 @@ const ASSIGN_DATA = [
   },
 ]
 
+const TEACHER_DATA = [
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328948',
+    status: 'done',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Χακάρουμε ότι υπάρχει',
+    id: 'L04328948',
+    status: 'doing',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Theseus Project',
+    id: 'L04328948',
+    status: 'doing',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Creating Facebook',
+    id: 'L04328948',
+    status: 'pending',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Random Stuff',
+    id: 'L04328948',
+    status: 'pending',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Random Dummy Project',
+    id: 'L04328948',
+    status: 'done',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Dummy Random Project',
+    id: 'L04328948',
+    status: 'doing',
+  },
+  {
+    path: 'software',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    id: 'L04328948',
+    status: 'done',
+  },
+]
+
 export function getProjects() {
   return PROJECT_DATA
 }
 
 export function getSearchbarData() {
   return DEVELOPING_DATA
+}
+
+export function getTeacherData() {
+  return TEACHER_DATA
 }
 
 export function getProjectById(id) {

@@ -1,6 +1,6 @@
-import styles from './MobileTeacherMenu.module.css'
+import styles from './MobileMenu.module.css'
 
-function MobileTeacherMenu({ isActive, setIsActive }) {
+function MobileMenu({ isActive, setIsActive, category }) {
   return (
     <div className={styles.menu_ctn}>
       <div onClick={() => setIsActive(1)}>
@@ -22,7 +22,7 @@ function MobileTeacherMenu({ isActive, setIsActive }) {
               : [styles.menu_box_default, styles.menu_box].join(' ')
           }
         >
-          Αιτήματα
+          {category === 'student' ? 'Αιτήσεις' : 'Αιτήματα'}
         </h2>
       </div>
       <div onClick={() => setIsActive(3)}>
@@ -33,11 +33,11 @@ function MobileTeacherMenu({ isActive, setIsActive }) {
               : [styles.menu_box_default, styles.menu_box].join(' ')
           }
         >
-          Εγκρίσεις
+          {category === 'student' ? 'Πρόοδος' : 'Εγκρίσεις'}
         </h2>
       </div>
     </div>
   )
 }
 
-export default MobileTeacherMenu
+export default MobileMenu

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MobileStudentMenu from '../components/student/MobileStudentMenu'
+import MobileMenu from '../components/MobileMenu'
 import SearchBar from '../components/SearchBar'
 import styles from './index.module.css'
 import Header from '../components/Header'
@@ -23,7 +23,8 @@ function StudentHome() {
   })
 
   function conditionalRender(isActive) {
-    if (isActive === 1) return <ProjectList DEVELOPING_DATA={filteredData} />
+    if (isActive === 1)
+      return <ProjectList DEVELOPING_DATA={filteredData} category={'student'} />
     if (isActive === 2) return <ApplicationBox />
     if (isActive === 3)
       return <h1>Εδώ θα μπεί το progress και τα tasks της διπλωματικής </h1>
@@ -38,7 +39,11 @@ function StudentHome() {
       </div>
 
       <div className={styles.menu}>
-        <MobileStudentMenu setIsActive={setIsActive} isActive={isActive} />
+        <MobileMenu
+          setIsActive={setIsActive}
+          isActive={isActive}
+          category={'student'}
+        />
       </div>
 
       {conditionalRender(isActive)}
