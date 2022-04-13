@@ -11,11 +11,15 @@ import FilterMenu from '../components/teacher/FilterMenu'
 function TeacherHome() {
   const [isActive, setIsActive] = useState(1)
   const [searchField, setSearchField] = useState('')
+  const [checkboxArray, setCheckboxArray] = useState([
+    'done',
+    'doing',
+    'pending',
+  ])
 
-  // To Be Done
-  // Τα δεδομένα θα περνάνε 2 φιλτραρίσματα, πριν κληθούν από το ProjectList
+  console.log(checkboxArray)
 
-  const filteredData = getTeacherData().filter((project) => {
+  const searchFilteredData = getTeacherData().filter((project) => {
     return (
       project.name.toLowerCase().includes(searchField.toLowerCase()) ||
       project.path.toLowerCase().includes(searchField.toLowerCase()) ||
@@ -23,9 +27,18 @@ function TeacherHome() {
     )
   })
 
+  const checkBoxFilteredData = searchFilteredData.filter((item) => {
+    return checkboxArray.includes(item.status)
+  })
+
   function conditionalRender(isActive) {
     if (isActive === 1)
-      return <ProjectList DEVELOPING_DATA={filteredData} category={'teacher'} />
+      return (
+        <ProjectList
+          DEVELOPING_DATA={checkBoxFilteredData}
+          category={'teacher'}
+        />
+      )
     if (isActive === 2)
       return <TeacherProjectBox status='done' name='Haskell Project' />
     if (isActive === 3) return <h1>3</h1>
@@ -46,7 +59,10 @@ function TeacherHome() {
           category={'teacher'}
         />
       </div>
-      <FilterMenu />
+      <FilterMenu
+        setCheckboxArray={setCheckboxArray}
+        checkboxArray={checkboxArray}
+      />
       {conditionalRender(isActive)}
     </div>
   )
