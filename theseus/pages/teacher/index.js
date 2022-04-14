@@ -17,8 +17,6 @@ function TeacherHome() {
     'pending',
   ])
 
-  console.log(checkboxArray)
-
   const searchFilteredData = getTeacherData().filter((project) => {
     return (
       project.name.toLowerCase().includes(searchField.toLowerCase()) ||

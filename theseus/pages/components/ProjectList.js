@@ -3,6 +3,8 @@ import TeacherProjectBox from './teacher/TeacherProjectBox'
 import styles from './ProjectList.module.css'
 import { useState } from 'react'
 import { BsArrowDownCircle } from 'react-icons/bs'
+import { Button } from '@chakra-ui/react'
+import Link from 'next/link'
 
 function ProjectList({ DEVELOPING_DATA, category }) {
   const [numberOfProjects, setNumberOfProject] = useState(6)
@@ -53,6 +55,15 @@ function ProjectList({ DEVELOPING_DATA, category }) {
           )
         }}
       />
+      {category === 'teacher' && (
+        <Link href={'teacher/NewProject'} passHref={true}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Button colorScheme={'telegram'} className={styles.button}>
+              Δημιουργία διπλωματικής
+            </Button>
+          </div>
+        </Link>
+      )}
     </div>
   )
 }

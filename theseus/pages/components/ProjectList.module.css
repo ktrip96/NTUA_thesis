@@ -2,7 +2,7 @@
   padding: 0.5rem;
   background-color: white;
   border-radius: 10px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 1rem;
   -webkit-box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.6);
@@ -15,3 +15,14 @@
   margin-top: 30px;
   color: #807f7f;
 }
+
+.button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
