@@ -56,7 +56,7 @@ function ProjectList({ DEVELOPING_DATA, category }) {
         }}
       />
       {category === 'teacher' && (
-        <Link href={'teacher/NewProject'} passHref={true}>
+        <Link href={'/teacher/NewProject'} passHref={true}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Button colorScheme={'telegram'} className={styles.button}>
               Δημιουργία διπλωματικής

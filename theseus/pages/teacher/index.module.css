@@ -1,6 +1,7 @@
 .main_ctn {
     background-color: #f9f8f8;
     padding-top: 15px;
+
   }
   
   .header {
@@ -9,21 +10,17 @@
     width: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* border: 2px solid red; */
   }
   
   .search {
     display: flex;
-    /* border: 2px solid green; */
     justify-content: center;
     margin-top: 15px;
   }
   
   .menu {
     margin-top: 15px;
-    padding-right: 1.4rem;
-    padding-left: 1.4rem;
-    /* border: 2px solid yellow; */
+    margin:auto;
   }
   
  
