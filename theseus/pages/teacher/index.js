@@ -9,6 +9,14 @@ import TeacherProjectBox from '../components/teacher/TeacherProjectBox'
 import FilterMenu from '../components/teacher/FilterMenu'
 
 function TeacherHome() {
+  /* 
+    Η isActive είναι μία μεταβλητή που κρατάει μέσα καθορίζει ποια σελίδα θα εμφανίσει το menu.
+    1 ==> Λίστα με διπλωματικές
+    2 ==> Λίστα με τα αιτήματα για διπλωματικές από φοιτητές
+    3 ==> Εγκρίσεις αν είσαι υπεύθυνος τομέα
+  
+  */
+
   const [isActive, setIsActive] = useState(1)
   const [searchField, setSearchField] = useState('')
   const [checkboxArray, setCheckboxArray] = useState([
@@ -16,6 +24,8 @@ function TeacherHome() {
     'doing',
     'pending',
   ])
+
+  // Φιλτράρισμα δεδομένων
 
   const searchFilteredData = getTeacherData().filter((project) => {
     return (
