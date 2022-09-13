@@ -31,11 +31,3 @@
   }
 }
 
-.test {
-  margin-top: 20px;
-  transition: all 0.2s ease-in-out;
-}
-
-.test:hover {
-  transform: scale(1.1);
-}

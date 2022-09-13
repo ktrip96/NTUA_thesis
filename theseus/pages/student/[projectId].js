@@ -2,20 +2,17 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import ProjectInfo from '../components/ProjectInfo'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
+import styles from './ProjectId.module.css'
 
 function ProjectPage() {
   const router = useRouter()
 
   const projectId = router.query.projectId
   return (
-    <div>
+    <div className={styles.box_ctn}>
       <AiOutlineArrowLeft
-        style={{
-          height: '40px',
-          width: '40px',
-          marginTop: '30px',
-          marginLeft: '15px',
-        }}
+        className={styles.icon}
+        onClick={() => router.back()}
       />
       <ProjectInfo projectId={projectId} />
     </div>

@@ -1,0 +1,23 @@
+.box_ctn{
+    position: relative;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+
+
+
+
+.icon{
+    height: 40px;
+    width:40px;
+    position: absolute;
+    top:15px;
+    left:15px;
+    transition:all 0.2s ease-in-out
+}
+
+.icon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}

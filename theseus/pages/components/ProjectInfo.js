@@ -43,12 +43,11 @@ function ProjectInfo({ projectId }) {
           className={styles.txt}
           style={{
             marginTop: '0.5rem',
-            paddingTop: '8px',
+            padding: '10px',
             borderRadius: '10px',
             color: 'white',
-            width: '200px',
+            width: 'fit-content',
             height: '40px',
-            textAlign: 'center',
             backgroundColor: `${returnStyling(project.path).backgroundColor}`,
           }}
         >
@@ -75,7 +74,7 @@ function ProjectInfo({ projectId }) {
       {/* Επικοινωνία */}
       <h1 className={styles.title}>Επικοινωνία</h1>
       <p className={styles.txt}>{project.communication}</p>
-      <Button colorScheme='blue' width='200px' className={styles.test}>
+      <Button colorScheme='blue' width='200px' mt={5}>
         Αίτηση
       </Button>
     </div>
