@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import MobileMenu from '../components/MobileMenu'
-import SearchBar from '../components/SearchBar'
+import MobileMenu from '../../components/MobileMenu'
+import SearchBar from '../../components/SearchBar'
 import styles from './index.module.css'
-import Header from '../components/Header'
-import ProjectList from '../components/ProjectList'
-import ApplicationBox from '../components/ApplicationBox'
+import Header from '../../components/Header'
+import ProjectList from '../../components/ProjectList'
+import ApplicationBox from '../../components/ApplicationBox'
 import { getSearchbarData } from '../../dummy_data'
 
 function StudentHome() {

@@ -1,4 +1,4 @@
-import StudentProjectBox from '../components/student/StudentProjectBox'
+import StudentProjectBox from './student/StudentProjectBox'
 import TeacherProjectBox from './teacher/TeacherProjectBox'
 import styles from './ProjectList.module.css'
 import { useState } from 'react'

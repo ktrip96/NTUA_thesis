@@ -26,7 +26,6 @@ function SearchBar({ setSearchField }) {
           type='tel'
           placeholder='Αναζήτηση'
           size='lg'
-          style={{ paddingLeft: '50px' }}
           onChange={handleChange}
         />
       </InputGroup>

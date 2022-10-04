@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import ProjectInfo from '../components/ProjectInfo'
+import ProjectInfo from '../../components/ProjectInfo'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import styles from './ProjectId.module.css'
 

@@ -1,26 +1,25 @@
 .main_ctn {
-    background-color: #f9f8f8;
-    padding-top: 15px;
-
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    width: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .search {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-  }
-  
-  .menu {
-    margin-top: 15px;
+    width:clamp(450px, 80%, 1300px);
     margin:auto;
-  }
-  
+    padding:30px;
+    border:1px solid red;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.menu {
+  margin-top: 15px;
+  margin:auto;
+}
+
+.grid_container{
+  padding:20px;
+  width:90%;
+  margin:auto;
+  border:1px solid green;
+}
  

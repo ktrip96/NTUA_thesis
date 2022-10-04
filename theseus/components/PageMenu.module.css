@@ -1,0 +1,38 @@
+.menu_ctn {
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  width: 90%;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.menu_box {
+  width: fit-content;
+  border-radius:5px;
+  border:1px solid rgba(135, 135, 135, 0.15);
+  background-color:rgba(135, 135, 135, 0.15);
+  padding:5px 15px 5px 15px;
+  font-size:clamp(14px, 1vw, 20px);
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.menu_box:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+
+
+
+@media (max-width: 425px) {
+  .menu_box_selected,
+  .menu_box_default {
+    font-size: 4vw;
+    padding: 0.2rem;
+  }
+
+  .menu_box_selected::after {
+    height: 1.5vw;
+  }
+}

@@ -1,7 +1,7 @@
 import styles from './Logo.module.css'
 
 function Logo({ category }) {
-  function conditionalRender() {
+  const conditionalRender = () => {
     if (category === 'student')
       return <h1 className={styles.logo_txt}>Θησέας</h1>
     else if (category === 'teacher')

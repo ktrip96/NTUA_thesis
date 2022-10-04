@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import Header from '../../components/Header'
 import styles from './NewProject.module.css'
 import { Button, Input, Textarea, Box, Tag, TagLabel } from '@chakra-ui/react'
 import { useState } from 'react'

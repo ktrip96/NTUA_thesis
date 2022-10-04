@@ -1,5 +1,5 @@
 .logo_box {
-  background-color: #5e81f4;
+  background-color: var(--blue-color);
   height: 3.75rem;
   width: 3.75rem;
   display: flex;

@@ -1,29 +1,19 @@
 import { useState } from 'react'
 import styles from './index.module.css'
-import Header from '../components/Header'
-import MobileMenu from '../components/MobileMenu'
-import SearchBar from '../components/SearchBar'
-import ProjectList from '../components/ProjectList'
+import Header from '../../components/Header'
+import PageMenu from '../../components/PageMenu'
+import SearchBar from '../../components/SearchBar'
+import ProjectList from '../../components/ProjectList'
 import { getTeacherData } from '../../dummy_data'
-import TeacherProjectBox from '../components/teacher/TeacherProjectBox'
-import FilterMenu from '../components/teacher/FilterMenu'
+import TeacherProjectBox from '../../components/teacher/TeacherProjectBox'
+import FilterMenu from '../../components/teacher/FilterMenu'
+import Grid from '../../components/teacher/Grid'
 
 function TeacherHome() {
-  /* 
-    Η isActive είναι μία μεταβλητή που κρατάει μέσα καθορίζει ποια σελίδα θα εμφανίσει το menu.
-    1 ==> Λίστα με διπλωματικές
-    2 ==> Λίστα με τα αιτήματα για διπλωματικές από φοιτητές
-    3 ==> Εγκρίσεις αν είσαι υπεύθυνος τομέα
-  
-  */
-
-  const [isActive, setIsActive] = useState(1)
+  const [activeMenuPage, setActiveMenuPage] = useState(1)
   const [searchField, setSearchField] = useState('')
-  const [checkboxArray, setCheckboxArray] = useState([
-    'done',
-    'doing',
-    'pending',
-  ])
+  const filterArray = ['Ολοκληρωμένη', 'Σε εξέλιξη', 'Διαθέσιμη']
+  const [activeFilters, setActiveFilters] = useState(filterArray)
 
   // Φιλτράρισμα δεδομένων
 
@@ -35,21 +25,30 @@ function TeacherHome() {
     )
   })
 
-  const checkBoxFilteredData = searchFilteredData.filter((item) => {
-    return checkboxArray.includes(item.status)
-  })
+  // const checkBoxFilteredData = searchFilteredData.filter((item) => {
+  //   return filterArray.includes(item.status)
+  // })
 
-  function conditionalRender(isActive) {
-    if (isActive === 1)
+  const conditionalRender = (activeMenuPage) => {
+    if (activeMenuPage === 1)
       return (
-        <ProjectList
-          DEVELOPING_DATA={checkBoxFilteredData}
-          category={'teacher'}
-        />
+        // <ProjectList
+        //   DEVELOPING_DATA={searchFilteredData}
+        //   category={'teacher'}
+        // />
+        <div className={styles.grid_container}>
+          <Grid category={'random'} data={searchFilteredData} />
+        </div>
       )
-    if (isActive === 2)
+    if (activeMenuPage === 2)
       return <TeacherProjectBox status='done' name='Haskell Project' />
-    if (isActive === 3) return <h1>3</h1>
+    if (activeMenuPage === 3)
+      return (
+        <h1>
+          Αυτή η σελίδα θα εμφανίζεται ΜΟΝΟ όταν ο user είναι υπεύθυνος τομέα.
+          Εδώ θα μπορεί να κάνει έγκριση της κάθε διπλωματικής
+        </h1>
+      )
   }
 
   return (
@@ -61,17 +60,19 @@ function TeacherHome() {
       </div>
 
       <div className={styles.menu}>
-        <MobileMenu
-          setIsActive={setIsActive}
-          isActive={isActive}
+        <PageMenu
+          setActiveMenuPage={setActiveMenuPage}
+          activeMenuPage={activeMenuPage}
           category={'teacher'}
         />
       </div>
       <FilterMenu
-        setCheckboxArray={setCheckboxArray}
-        checkboxArray={checkboxArray}
+        filterArray={filterArray}
+        activeFilters={activeFilters}
+        setActiveFilters={setActiveFilters}
       />
-      {conditionalRender(isActive)}
+
+      {conditionalRender(activeMenuPage)}
     </div>
   )
 }

@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Inter&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Manrope';
-  background-color: #f9f8f8;
+}
+
+:root{
+  --blue-color: rgb(66,133, 244);
+  --red-color: rgb(219 68 55);
+  --yellow-color: rgb(244 180 0);
+  --green-color: rgb(15 157 88);
+  --orange-color: rgb(237, 137, 54);
+  --purple-color: rgb(159, 122, 234);
+  --pink-color: rgb(237, 100, 166);
+
+
 }
 
 a {
@@ -14,4 +24,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.center_items{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.same_line{
+  display:flex;
+  align-items: center;
 }

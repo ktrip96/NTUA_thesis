@@ -1,0 +1,13 @@
+
+.box_ctn{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    width: 90%;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.label{
+    font-size:clamp(14px, 1vw, 20px);
+}

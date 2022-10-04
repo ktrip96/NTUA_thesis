@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/react'
 import styles from './ProjectInfo.module.css'
-import { getProjectById } from '../../dummy_data'
+import { getProjectById } from '../dummy_data'
 import Loading from './Loading'
 
 function ProjectInfo({ projectId }) {
