@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import styles from './index.module.css'
 import Header from '../../components/Header'
-import PageMenu from '../../components/PageMenu'
+import PageMenu from '../../components/teacher/PageMenu'
 import SearchBar from '../../components/SearchBar'
-import ProjectList from '../../components/ProjectList'
 import { getTeacherData } from '../../dummy_data'
 import TeacherProjectBox from '../../components/teacher/TeacherProjectBox'
 import FilterMenu from '../../components/teacher/FilterMenu'
 import Grid from '../../components/teacher/Grid'
+import Link from 'next/link'
+import { Button } from '@chakra-ui/react'
 
 function TeacherHome() {
   const [activeMenuPage, setActiveMenuPage] = useState(1)
@@ -25,19 +26,15 @@ function TeacherHome() {
     )
   })
 
-  // const checkBoxFilteredData = searchFilteredData.filter((item) => {
-  //   return filterArray.includes(item.status)
-  // })
+  const statusFilteredData = searchFilteredData.filter((item) => {
+    return activeFilters.includes(item.status)
+  })
 
   const conditionalRender = (activeMenuPage) => {
     if (activeMenuPage === 1)
       return (
-        // <ProjectList
-        //   DEVELOPING_DATA={searchFilteredData}
-        //   category={'teacher'}
-        // />
         <div className={styles.grid_container}>
-          <Grid category={'random'} data={searchFilteredData} />
+          <Grid category={'random'} data={statusFilteredData} />
         </div>
       )
     if (activeMenuPage === 2)
@@ -55,22 +52,32 @@ function TeacherHome() {
     <div className={styles.main_ctn}>
       <Header category={'teacher'} />
 
-      <div className={styles.search}>
+      <div className={styles.center}>
         <SearchBar setSearchField={setSearchField} />
       </div>
 
-      <div className={styles.menu}>
+      <Link href={'/teacher/NewProject'} passHref={true}>
+        <div className={styles.center}>
+          <Button colorScheme={'whatsapp'} size='lg' className={styles.button}>
+            Νέα διπλωματική
+          </Button>
+        </div>
+      </Link>
+
+      <div className={styles.center}>
         <PageMenu
           setActiveMenuPage={setActiveMenuPage}
           activeMenuPage={activeMenuPage}
           category={'teacher'}
         />
       </div>
-      <FilterMenu
-        filterArray={filterArray}
-        activeFilters={activeFilters}
-        setActiveFilters={setActiveFilters}
-      />
+      <div className={styles.center}>
+        <FilterMenu
+          filterArray={filterArray}
+          activeFilters={activeFilters}
+          setActiveFilters={setActiveFilters}
+        />
+      </div>
 
       {conditionalRender(activeMenuPage)}
     </div>

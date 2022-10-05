@@ -1,19 +1,18 @@
 import React from 'react'
-
-const ThesisBox = ({ path }) => {
-  return (
-    <div style={{ width: '100px', height: '100px', border: '1px solid red' }}>
-      {path}
-    </div>
-  )
-}
+import styles from './Grid.module.css'
+import ThesisBox from './ThesisBox'
 
 function Grid({ data }) {
   console.log(data)
   return (
-    <div>
+    <div className={styles.grid}>
       {data.map((item) => (
-        <ThesisBox key={item.id} path={item.path} />
+        <ThesisBox
+          key={item.id}
+          title={item.name}
+          path={item.path}
+          status={item.status}
+        />
       ))}
     </div>
   )
