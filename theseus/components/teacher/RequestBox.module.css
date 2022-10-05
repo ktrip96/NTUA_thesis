@@ -1,0 +1,56 @@
+
+.request_box{
+    width:350px;
+    height:300px;
+    border-radius:5px;
+    margin:auto;
+    border:1px solid rgba(0,0,0,0.2);
+    padding:13px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+
+.request_box:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+.label{
+    font-weight:bold;
+}
+
+
+.arrow_icon{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+}
+
+.close_icon{
+    position:absolute;
+    bottom:10px;
+    left:50px;
+    color:var(--red-color);
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}
+
+.done_icon{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color:var(--green-color);
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}
+
+.close_icon:hover, .done_icon:hover{
+    transform: scale(1.2);
+
+}
+
+
+

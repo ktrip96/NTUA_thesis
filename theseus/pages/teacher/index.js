@@ -8,7 +8,7 @@ import TeacherProjectBox from '../../components/teacher/TeacherProjectBox'
 import FilterMenu from '../../components/teacher/FilterMenu'
 import Grid from '../../components/teacher/Grid'
 import Link from 'next/link'
-import { Button } from '@chakra-ui/react'
+import { Button, useBreakpointValue } from '@chakra-ui/react'
 
 function TeacherHome() {
   const [activeMenuPage, setActiveMenuPage] = useState(1)
@@ -19,6 +19,7 @@ function TeacherHome() {
   // Φιλτράρισμα δεδομένων
 
   const searchFilteredData = getTeacherData().filter((project) => {
+    //TODO: πρέπει να γίνει update ανάλογα με τα πραγματικά data
     return (
       project.name.toLowerCase().includes(searchField.toLowerCase()) ||
       project.path.toLowerCase().includes(searchField.toLowerCase()) ||
@@ -33,32 +34,48 @@ function TeacherHome() {
   const conditionalRender = (activeMenuPage) => {
     if (activeMenuPage === 1)
       return (
-        <div className={styles.grid_container}>
-          <Grid category={'random'} data={statusFilteredData} />
-        </div>
+        <>
+          <div className={styles.center}>
+            <FilterMenu
+              filterArray={filterArray}
+              activeFilters={activeFilters}
+              setActiveFilters={setActiveFilters}
+            />
+          </div>
+          <div className={styles.grid_container}>
+            <Grid category='thesis' data={statusFilteredData} />
+          </div>
+        </>
       )
     if (activeMenuPage === 2)
-      return <TeacherProjectBox status='done' name='Haskell Project' />
+      return (
+        <div className={styles.grid_container}>
+          <Grid category='requests' data={statusFilteredData} />
+        </div>
+      )
     if (activeMenuPage === 3)
       return (
-        <h1>
-          Αυτή η σελίδα θα εμφανίζεται ΜΟΝΟ όταν ο user είναι υπεύθυνος τομέα.
-          Εδώ θα μπορεί να κάνει έγκριση της κάθε διπλωματικής
-        </h1>
+        <div className={styles.grid_container}>
+          <Grid category='approvals' data={statusFilteredData} />
+        </div>
       )
   }
 
   return (
-    <div className={styles.main_ctn}>
+    <div className='main_ctn'>
       <Header category={'teacher'} />
 
       <div className={styles.center}>
         <SearchBar setSearchField={setSearchField} />
       </div>
 
-      <Link href={'/teacher/NewProject'} passHref={true}>
+      <Link href={'/teacher/newProject'} passHref={true}>
         <div className={styles.center}>
-          <Button colorScheme={'whatsapp'} size='lg' className={styles.button}>
+          <Button
+            colorScheme={'whatsapp'}
+            size={useBreakpointValue(['sm', 'md', 'lg'])}
+            className={styles.button}
+          >
             Νέα διπλωματική
           </Button>
         </div>
@@ -69,13 +86,6 @@ function TeacherHome() {
           setActiveMenuPage={setActiveMenuPage}
           activeMenuPage={activeMenuPage}
           category={'teacher'}
-        />
-      </div>
-      <div className={styles.center}>
-        <FilterMenu
-          filterArray={filterArray}
-          activeFilters={activeFilters}
-          setActiveFilters={setActiveFilters}
         />
       </div>
 

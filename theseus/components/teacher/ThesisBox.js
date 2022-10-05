@@ -40,8 +40,8 @@ const returnIcon = (status) => {
 const ThesisBox = ({ path, status, title }) => {
   return (
     <div className={styles.thesis_box} style={returnBackgroundColor(status)}>
-      <div style={{ height: 'fit-content' }}>
-        <label className={styles.label}>Title: </label>
+      <div>
+        <label className={styles.label}>Τίτλος: </label>
         <span>{title}</span>
       </div>
 

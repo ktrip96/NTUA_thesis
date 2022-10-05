@@ -1,12 +1,3 @@
-.main_ctn {
-    width:clamp(450px, 80%, 1300px);
-    margin:auto;
-    min-height: 100vh;
-    padding:30px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius:5px;
-    background-color:white;
-}
 
 .center {
   display: flex;

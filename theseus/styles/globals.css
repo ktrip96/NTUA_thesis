@@ -3,7 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #dcdcdc94;
+  background-color: #dcdcdc94 !important;
 }
 
 :root{
@@ -14,15 +14,13 @@ body {
   --orange-color: rgb(237, 137, 54);
   --purple-color: rgb(159, 122, 234);
   --pink-color: rgb(237, 100, 166);
-  --light-blue-color: rgba(66,133, 244, 0.1);
-  --light-red-color: rgba(219, 68, 55, 0.1a);
-  --light-yellow-color: rgba(244 ,180, 0, 0.1);
-  --light-green-color: rgba(15 ,157, 88, 0.1);
-  --light-orange-color: rgba(237, 137, 54, 0.1);
-  --light-purple-color: rgba(159, 122, 234, 0.1);
-  --light-pink-color: rgba(237, 100, 166, 0.1a);
-
-
+  --light-blue-color: rgb(219,234, 254);
+  --light-red-color: rgb(254,226, 226);
+  --light-yellow-color: rgba(218, 198, 23, 0.2);
+  --light-green-color:  rgb(220,252, 231);
+  --light-orange-color: rgb(254,249,195);
+  --light-purple-color: rgba(159, 122, 234, 0.2);
+  --light-pink-color: rgba(237, 100, 166, 0.2);
 }
 
 a {
@@ -33,6 +31,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.main_ctn {
+  width:clamp(450px, 80%, 1300px);
+  margin:auto;
+  min-height: 100vh;
+  padding:30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius:5px;
+  background-color:white;
+}
+
 
 .center_items{
   display:flex;
