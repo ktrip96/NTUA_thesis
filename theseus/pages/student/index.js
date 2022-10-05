@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import MobileMenu from '../../components/MobileMenu'
+import PageMenu from '../../components/PageMenu'
 import SearchBar from '../../components/SearchBar'
 import styles from './index.module.css'
 import Header from '../../components/Header'
 import ProjectList from '../../components/ProjectList'
-import ApplicationBox from '../../components/ApplicationBox'
 import { getSearchbarData } from '../../dummy_data'
 
 function StudentHome() {
-  const [isActive, setIsActive] = useState(1)
+  const [activeMenuPage, setActiveMenuPage] = useState(1)
   const [searchField, setSearchField] = useState('')
 
   // Σημαντική σημείωση: Κανονικά η getSearchbarData() δεν θα υπάρχει.
@@ -22,16 +21,14 @@ function StudentHome() {
     )
   })
 
-  function conditionalRender(isActive) {
-    if (isActive === 1)
+  function conditionalRender(activeMenuPage) {
+    if (activeMenuPage === 1)
       return <ProjectList DEVELOPING_DATA={filteredData} category={'student'} />
-    if (isActive === 2) return <ApplicationBox />
-    if (isActive === 3)
-      return <h1>Εδώ θα μπεί το progress και τα tasks της διπλωματικής </h1>
+    if (activeMenuPage === 2) return <h1>Αιτήσεις</h1>
   }
 
   return (
-    <div className={styles.main_ctn}>
+    <div className='main_ctn'>
       <Header category={'student'} />
 
       <div className={styles.search}>
@@ -39,14 +36,14 @@ function StudentHome() {
       </div>
 
       <div className={styles.menu}>
-        <MobileMenu
-          setIsActive={setIsActive}
-          isActive={isActive}
+        <PageMenu
+          setActiveMenuPage={setActiveMenuPage}
+          activeMenuPage={activeMenuPage}
           category={'student'}
         />
       </div>
 
-      {conditionalRender(isActive)}
+      {conditionalRender(activeMenuPage)}
     </div>
   )
 }

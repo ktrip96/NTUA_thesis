@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from './Grid.module.css'
-import ThesisBox from './ThesisBox'
-import ApprovalBox from './ApprovalBox'
-import RequestBox from './RequestBox'
+import ThesisBox from './teacher/ThesisBox'
+import ApprovalBox from './teacher/ApprovalBox'
+import RequestBox from './teacher/RequestBox'
 
 function Grid({ category, data }) {
-  console.log(data)
   if (category === 'thesis')
     return (
       <div className={styles.grid}>
@@ -33,6 +32,33 @@ function Grid({ category, data }) {
       </div>
     )
   if (category === 'approvals')
+    return (
+      <div className={styles.grid}>
+        {data.map((item) => (
+          <ApprovalBox
+            key={item.id}
+            title={item.name}
+            path={item.path}
+            status={item.status}
+          />
+        ))}
+      </div>
+    )
+
+  if (category === 'student_thesis')
+    return (
+      <div className={styles.grid}>
+        {data.map((item) => (
+          <ApprovalBox
+            key={item.id}
+            title={item.name}
+            path={item.path}
+            status={item.status}
+          />
+        ))}
+      </div>
+    )
+  if (category === 'student_requests')
     return (
       <div className={styles.grid}>
         {data.map((item) => (

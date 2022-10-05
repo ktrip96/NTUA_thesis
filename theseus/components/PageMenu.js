@@ -1,7 +1,11 @@
 import styles from './PageMenu.module.css'
 
+let menuArray = []
+
 function PageMenu({ activeMenuPage, setActiveMenuPage, category }) {
-  const menuArray = ['Διπλωματικές', 'Αιτήματα', 'Εγκρίσεις']
+  if (category === 'teacher')
+    menuArray = ['Διπλωματικές', 'Αιτήματα', 'Εγκρίσεις']
+  if (category === 'student') menuArray = ['Διπλωματικές', 'Οι αιτήσεις μου']
 
   return (
     <div className={styles.menu_ctn}>

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import styles from './index.module.css'
 import Header from '../../components/Header'
-import PageMenu from '../../components/teacher/PageMenu'
+import PageMenu from '../../components/PageMenu'
 import SearchBar from '../../components/SearchBar'
 import { getTeacherData } from '../../dummy_data'
 import TeacherProjectBox from '../../components/teacher/TeacherProjectBox'
 import FilterMenu from '../../components/teacher/FilterMenu'
-import Grid from '../../components/teacher/Grid'
+import Grid from '../../components/Grid'
 import Link from 'next/link'
 import { Button, useBreakpointValue } from '@chakra-ui/react'
 
@@ -70,7 +70,9 @@ function TeacherHome() {
       </div>
 
       <Link href={'/teacher/newProject'} passHref={true}>
-        <div className={styles.center}>
+        <div
+          style={{ margin: 'auto', width: 'fit-content', marginTop: '2rem' }}
+        >
           <Button
             colorScheme={'whatsapp'}
             size={useBreakpointValue(['sm', 'md', 'lg'])}
