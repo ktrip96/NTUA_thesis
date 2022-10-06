@@ -52,8 +52,7 @@ const ThesisBox = ({ path, status, title }) => {
       <span> 22/05/2022</span>
       <br />
       <div className={styles.status}>
-        <label className={styles.label}>Status: </label>
-        <span>{status}</span>
+        <label className={styles.label}>{status} </label>
         {returnIcon(status)}
       </div>
       <HiChevronRight size={30} className={styles.icon} />

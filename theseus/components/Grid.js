@@ -3,6 +3,8 @@ import styles from './Grid.module.css'
 import ThesisBox from './teacher/ThesisBox'
 import ApprovalBox from './teacher/ApprovalBox'
 import RequestBox from './teacher/RequestBox'
+import StudentRequestBox from './student/StudentRequestBox'
+import StudentThesisBox from './student/StudentThesisBox'
 
 function Grid({ category, data }) {
   if (category === 'thesis')
@@ -49,11 +51,11 @@ function Grid({ category, data }) {
     return (
       <div className={styles.grid}>
         {data.map((item) => (
-          <ApprovalBox
+          <StudentThesisBox
             key={item.id}
             title={item.name}
             path={item.path}
-            status={item.status}
+            teacher={item.teacher}
           />
         ))}
       </div>
@@ -62,11 +64,12 @@ function Grid({ category, data }) {
     return (
       <div className={styles.grid}>
         {data.map((item) => (
-          <ApprovalBox
+          <StudentRequestBox
+            status={item.status}
+            teacher={item.teacher}
+            path={item.path}
             key={item.id}
             title={item.name}
-            path={item.path}
-            status={item.status}
           />
         ))}
       </div>

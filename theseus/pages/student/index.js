@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar'
 import styles from './index.module.css'
 import Header from '../../components/Header'
 import ProjectList from '../../components/ProjectList'
+import Grid from '../../components/Grid'
 import { getSearchbarData } from '../../dummy_data'
 
 function StudentHome() {
@@ -21,10 +22,19 @@ function StudentHome() {
     )
   })
 
-  function conditionalRender(activeMenuPage) {
+  function conditionalMenuRender(activeMenuPage) {
     if (activeMenuPage === 1)
-      return <ProjectList DEVELOPING_DATA={filteredData} category={'student'} />
-    if (activeMenuPage === 2) return <h1>Αιτήσεις</h1>
+      return (
+        <div className={styles.grid_container}>
+          <Grid category='student_thesis' data={getSearchbarData()} />
+        </div>
+      )
+    if (activeMenuPage === 2)
+      return (
+        <div className={styles.grid_container}>
+          <Grid category='student_requests' data={getSearchbarData()} />
+        </div>
+      )
   }
 
   return (
@@ -43,7 +53,7 @@ function StudentHome() {
         />
       </div>
 
-      {conditionalRender(activeMenuPage)}
+      {conditionalMenuRender(activeMenuPage)}
     </div>
   )
 }

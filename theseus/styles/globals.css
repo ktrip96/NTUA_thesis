@@ -14,10 +14,10 @@ body {
   --orange-color: rgb(237, 137, 54);
   --purple-color: rgb(159, 122, 234);
   --pink-color: rgb(237, 100, 166);
-  --light-blue-color: rgb(219,234, 254);
-  --light-red-color: rgb(254,226, 226);
+  --light-blue-color: rgba(219, 234, 254, 0.5);
+  --light-red-color: rgb(254,226, 226, 0.5);
   --light-yellow-color: rgba(218, 198, 23, 0.2);
-  --light-green-color:  rgb(220,252, 231);
+  --light-green-color:  rgb(220,252, 231, 0.5);
   --light-orange-color: rgb(254,249,195);
   --light-purple-color: rgba(159, 122, 234, 0.2);
   --light-pink-color: rgba(237, 100, 166, 0.2);
@@ -52,4 +52,5 @@ a {
 .same_line{
   display:flex;
   align-items: center;
+  gap:10px;
 }

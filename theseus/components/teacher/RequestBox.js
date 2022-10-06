@@ -21,10 +21,7 @@ const RequestBox = ({ title }) => {
       <label className={styles.label}>Όνομα Φοιτητή: </label>
       <span> Κωνσταντίνος Τριπαλιτάκης</span>
       <br />
-      <label className={styles.label}>Κωδικός Φοιτητή: </label>
-      <span> 03114818</span>
-      <br />
-      <HiChevronRight size={30} className={styles.arrow_icon} />
+
       <MdDoneOutline
         size={30}
         className={styles.done_icon}
@@ -35,6 +32,10 @@ const RequestBox = ({ title }) => {
         className={styles.close_icon}
         onClick={() => alert('Rejected')}
       />
+      <div className={styles.status}>
+        <label className={styles.label}> Δες περισσότερα</label>
+        <HiChevronRight size={30} className={styles.arrow_icon} />
+      </div>
     </div>
   )
 }

@@ -24,111 +24,131 @@ const USER_DATA = [
 
 const DEVELOPING_DATA = [
   {
-    path: 'software',
+    path: 'Η',
+    teacher: 'Γιώργιος Σιόλας',
+    status: 'Απορρίφθηκε',
+    name: 'Artificial Intelligence',
+    id: 'L04328947',
+  },
+  {
+    path: 'Λ',
+    teacher: 'Νίκος Παπασπύρου',
+    name: 'Haskell Project',
+    status: 'Σε αναμονή',
+    id: 'L04328946',
+  },
+  {
+    path: 'Λ',
+    teacher: 'Νίκος Παπασπύρου',
+    status: 'Απορρίφθηκε',
+    name: 'Βελτιστοποίηση τοποθέτησης και επιλογής Κόμβων Αναμετάδοσης σε Ετερογενή Δίκτυα επόμενης γενιάς (5G και Beyond) με χρήση τεχνικών Μηχανικής Μάθησης (ML). (1 Άτομο)',
+    id: 'L04328948',
+  },
+  {
+    path: 'Τ',
+    teacher: 'Βασίλης Βεσκούκης',
+    name: 'Telecommunications',
+    status: 'Σε αναμονή',
+    id: 'L04328946',
+  },
+  {
+    path: 'Λ',
     teacher: 'Νίκος Παπασπύρου',
     name: 'Haskell Project',
     id: 'L04328948',
   },
   {
-    path: 'energy',
+    path: 'Ε',
     teacher: 'Παναγιώτης Τσανάκας',
     name: 'Theseus Project',
     id: 'L04328948',
   },
   {
-    path: 'communications',
+    path: 'Τ',
     teacher: 'Βασίλης Βεσκούκης',
     name: 'Telecommunications',
     id: 'L04328947',
   },
   {
-    path: 'electronics',
+    path: 'Η',
     teacher: 'Γιώργιος Σιόλας',
     name: 'Artificial Intelligence',
+    status: 'Σε αναμονή',
     id: 'L04328947',
   },
   {
-    path: 'software',
+    path: 'Λ',
     teacher: 'Νίκος Παπασπύρου',
     name: 'Haskell Project',
     id: 'L04328946',
   },
   {
-    path: 'communications',
+    path: 'Τ',
     teacher: 'Βασίλης Βεσκούκης',
     name: 'Telecommunications',
     id: 'L04328946',
   },
+
   {
-    path: 'software',
-    teacher: 'Νίκος Παπασπύρου',
-    name: 'Haskell Project',
-    id: 'L04328948',
-  },
-  {
-    path: 'energy',
+    path: 'Ε',
     teacher: 'Παναγιώτης Τσανάκας',
+    status: 'Απορρίφθηκε',
     name: 'Theseus Project',
     id: 'L04328948',
   },
   {
-    path: 'communications',
+    path: 'Τ',
     teacher: 'Βασίλης Βεσκούκης',
+    status: 'Απορρίφθηκε',
     name: 'Telecommunications',
     id: 'L04328947',
   },
   {
-    path: 'electronics',
-    teacher: 'Γιώργιος Σιόλας',
-    name: 'Artificial Intelligence',
-    id: 'L04328947',
-  },
-  {
-    path: 'software',
+    path: 'Λ',
     teacher: 'Νίκος Παπασπύρου',
     name: 'Haskell Project',
-    id: 'L04328946',
-  },
-  {
-    path: 'communications',
-    teacher: 'Βασίλης Βεσκούκης',
-    name: 'Telecommunications',
-    id: 'L04328946',
-  },
-  {
-    path: 'software',
-    teacher: 'Νίκος Παπασπύρου',
-    name: 'Haskell Project',
+    status: 'Σε αναμονή',
+
     id: 'L04328948',
   },
   {
-    path: 'energy',
+    path: 'Ε',
     teacher: 'Παναγιώτης Τσανάκας',
     name: 'Theseus Project',
+    status: 'Σε αναμονή',
+
     id: 'L04328948',
   },
   {
-    path: 'communications',
+    path: 'Τ',
     teacher: 'Βασίλης Βεσκούκης',
     name: 'Telecommunications',
+    status: 'Σε αναμονή',
+
     id: 'L04328947',
   },
   {
-    path: 'electronics',
+    path: 'Η',
     teacher: 'Γιώργιος Σιόλας',
     name: 'Artificial Intelligence',
+    status: 'Απορρίφθηκε',
+
     id: 'L04328947',
   },
   {
-    path: 'software',
+    path: 'Λ',
     teacher: 'Νίκος Παπασπύρου',
     name: 'Haskell Project',
+    status: 'Σε αναμονή',
+
     id: 'L04328946',
   },
   {
-    path: 'communications',
+    path: 'Τ',
     teacher: 'Βασίλης Βεσκούκης',
     name: 'Telecommunications',
+    status: 'Σε αναμονή',
+
     id: 'L04328946',
   },
 ]
@@ -161,7 +181,7 @@ const PROJECT_DATA = [
     prequisites: ['ReactJS', 'NextJS'],
     communication: 'tsanakas@gmail.com',
     bibliography: '[1].NextJS Handbook',
-    path: 'electronics',
+    path: 'Η',
     isAccepted: false,
   },
   {

@@ -1,0 +1,59 @@
+
+.thesis_box{
+    width:350px;
+    height:300px;
+    border-radius:5px;
+    margin:auto;
+    border:1px solid rgba(0,0,0,0.2);
+    padding:13px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+
+.thesis_box:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+.label{
+    font-weight:bold;
+}
+
+.status{
+    height:50px;
+    padding-top:10px;
+    border-radius:5x;
+    border-top:1px solid rgba(0,0,0,0.2);
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    text-align: center;
+    background-color: var(--green-color);
+    opacity: 0.9;
+    color:white;
+    font-weight: bold;
+}
+
+.icon{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+}
+
+.status_icon{
+    width:30px;
+    height:30px;
+    position:absolute;
+    bottom:10px;
+    left:10px
+}
+
+.tag{
+    position:absolute;
+    left:10px;
+    bottom:60px;
+}

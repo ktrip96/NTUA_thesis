@@ -24,7 +24,6 @@ const ApprovalBox = ({ title }) => {
       <label className={styles.label}>Φοιτητής: </label>
       <span> Κωνσταντίνος Τριπαλιτάκης</span>
 
-      <HiChevronRight size={30} className={styles.arrow_icon} />
       <MdDoneOutline
         size={30}
         className={styles.done_icon}
@@ -35,6 +34,10 @@ const ApprovalBox = ({ title }) => {
         className={styles.close_icon}
         onClick={() => alert('Rejected')}
       />
+      <div className={styles.status}>
+        <label className={styles.label}> Δες περισσότερα</label>
+        <HiChevronRight size={30} className={styles.arrow_icon} />
+      </div>
     </div>
   )
 }

@@ -1,29 +1,20 @@
-.main_ctn {
-  background-color: #f9f8f8;
-  display: grid;
-  padding-top: 15px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  width: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  /* border: 2px solid red; */
-}
-
 .search {
   display: flex;
   /* border: 2px solid green; */
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 .menu {
-  margin-top: 15px;
-  padding-right: 20px;
-  padding-left: 20px;
-  /* border: 2px solid yellow; */
+  margin-top: 1rem;
+  display:flex;
+  justify-content: center;
+
+}
+
+.grid_container{
+  padding:20px 0px 20px 0px;
+  width:90%;
+  margin:auto;
 }
 

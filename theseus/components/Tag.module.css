@@ -1,0 +1,12 @@
+.tag{
+    height:fit-content;
+    padding:8px 12px 8px 12px;
+    width:max-content;
+    border-radius:4px;
+    color:white;
+    font-size:14px;
+    font-weight: bold;
+    color:var(--green-color);
+    background-color: var(--light-green-color);
+}
+
