@@ -13,6 +13,7 @@ function Grid({ category, data }) {
         {data.map((item) => (
           <ThesisBox
             key={item.id}
+            id={item.id}
             title={item.name}
             path={item.path}
             status={item.status}
@@ -53,6 +54,7 @@ function Grid({ category, data }) {
         {data.map((item) => (
           <StudentThesisBox
             key={item.id}
+            id={item.id}
             title={item.name}
             path={item.path}
             teacher={item.teacher}

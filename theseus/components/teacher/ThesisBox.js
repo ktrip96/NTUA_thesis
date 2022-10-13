@@ -3,6 +3,7 @@ import { HiChevronRight } from 'react-icons/hi'
 import { MdDoneOutline, MdPendingActions } from 'react-icons/md'
 import { FaLaptopCode } from 'react-icons/fa'
 import styles from './ThesisBox.module.css'
+import Link from 'next/link'
 
 const returnBackgroundColor = (status) => {
   if (status === 'Ολοκληρωμένη')
@@ -37,26 +38,28 @@ const returnIcon = (status) => {
     )
 }
 
-const ThesisBox = ({ path, status, title }) => {
+const ThesisBox = ({ id, path, status, title }) => {
   return (
-    <div className={styles.thesis_box} style={returnBackgroundColor(status)}>
-      <div>
-        <label className={styles.label}>Τίτλος: </label>
-        <span>{title}</span>
-      </div>
+    <Link href={`/thesis/${id}`} passHref>
+      <div className={styles.thesis_box} style={returnBackgroundColor(status)}>
+        <div>
+          <label className={styles.label}>Τίτλος: </label>
+          <span>{title}</span>
+        </div>
 
-      <label className={styles.label}>Συσχετιζόμενο Μάθημα: </label>
-      <span> Προηγμένες Τεχνολογίες Κινητού Υπολογισμού</span>
-      <br />
-      <label className={styles.label}>Ημερομηνία: </label>
-      <span> 22/05/2022</span>
-      <br />
-      <div className={styles.status}>
-        <label className={styles.label}>{status} </label>
-        {returnIcon(status)}
+        <label className={styles.label}>Συσχετιζόμενο Μάθημα: </label>
+        <span> Προηγμένες Τεχνολογίες Κινητού Υπολογισμού</span>
+        <br />
+        <label className={styles.label}>Ημερομηνία: </label>
+        <span> 22/05/2022</span>
+        <br />
+        <div className={styles.status}>
+          <label className={styles.label}>{status} </label>
+          {returnIcon(status)}
+        </div>
+        <HiChevronRight size={30} className={styles.icon} />
       </div>
-      <HiChevronRight size={30} className={styles.icon} />
-    </div>
+    </Link>
   )
 }
 export default ThesisBox

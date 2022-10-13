@@ -5,8 +5,8 @@ import { Button, Input, Textarea, useBreakpointValue } from '@chakra-ui/react'
 //TODO: Πολλά από τα Inputs θα πρέπει να τα κάνω Autocomplete.
 // π.χ. θέλω ο Σιόλας και ο σιόλας να είναι το ίδιο άτομο. Δεν πρέπει να επιτρέπω ορθογραφικά
 
-//TODO: Πολλές διπλωματικές στα real data δεν θα έχουν όλα τα πεδία. Πρέπει να το τσεκάρω πριν κάνω render
-//TODO: Αντίστοιχα πολλές θα έχουν κάποια έξτρα πεδία
+//TODO: Πρέπει το κείμενο να εισέρχεται στη βάση με τη μορφή που το δίνει ο κάθε καθηγητής.
+//TODO: κάτι αντίστοιχο με το github README δλδ.
 
 function NewProject() {
   return (
@@ -16,13 +16,9 @@ function NewProject() {
       <div className={styles.box_ctn}>
         <h2 className={styles.subtitle}>Τίτλος</h2>
         <Input mt={2} mb={2} bg='white' />
-        <h2 className={styles.subtitle}>Επιβλέπων</h2>
-        <Input mt={2} mb={2} bg='white' />
-        <h2 className={styles.subtitle}>1o μέλος επιτροπής</h2>
-        <Input mt={2} mb={2} bg='white' />
-        <h2 className={styles.subtitle}>2ο μέλος επιτροπής</h2>
-        <Input mt={2} mb={2} bg='white' />
         <h2 className={styles.subtitle}>Περιγραφή</h2>
+        <Textarea mt={2} mb={2} bg='white' />
+        <h2 className={styles.subtitle}>Επιπρόσθετες Πληροφορίες</h2>
         <Textarea mt={2} mb={2} bg='white' />
 
         <h2 className={styles.subtitle}>Συσχετιζόμενο Μάθημα</h2>
