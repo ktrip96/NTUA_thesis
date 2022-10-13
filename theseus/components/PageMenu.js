@@ -13,7 +13,15 @@ function PageMenu({ activeMenuPage, setActiveMenuPage, category }) {
         <button key={key} onClick={() => setActiveMenuPage(key + 1)}>
           <h2
             className={styles.menu_box}
-            style={activeMenuPage === key + 1 ? { fontWeight: 'bold' } : {}}
+            style={
+              activeMenuPage === key + 1
+                ? {
+                    fontWeight: 'bold',
+                    backgroundColor: '#444444',
+                    color: 'white',
+                  }
+                : {}
+            }
           >
             {item}
           </h2>

@@ -10,8 +10,8 @@
 .menu_box {
   width: fit-content;
   border-radius:5px;
-  border:1px solid rgba(135, 135, 135, 0.15);
-  background-color:rgba(135, 135, 135, 0.15);
+  border:1px solid #444444;
+  background-color:white;
   padding:5px 15px 5px 15px;
   font-size:clamp(14px, 1vw, 20px);
   text-align: center;

@@ -32,7 +32,7 @@ const returnIcon = (status) => {
     )
 }
 
-const StudentRequestBox = ({ status = 'Επιτυχία', title, teacher }) => {
+const StudentRequestBox = ({ status = 'Σε αναμονή', title, teacher }) => {
   return (
     <div className={styles.thesis_box}>
       <div>
