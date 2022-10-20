@@ -41,12 +41,17 @@
 }
 
 .box_ctn a{
-    color:var(--green-color);
+    color:var(--blue-color);
     font-weight: bold;
+}
+
+.box_ctn a:hover{
+    text-decoration: underline;
 }
 
 .same_line{
     display: flex;
+    margin-top:5px;
 }    
   
 
@@ -88,14 +93,14 @@
     color:white;
 }
 
-.edit{
-    border:1px solid var(--orange-color);
-    color:var(--orange-color);
+.accept{
+    border:1px solid var(--green-color);
+    color:var(--green-color);
 }
 
-.edit:hover, .edit:focus{
+.accept:hover, .accept:focus{
     color:white;
-    background-color: var(--orange-color);
+    background-color: var(--green-color);
 }
 
 .apply{

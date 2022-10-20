@@ -1,15 +1,16 @@
 import { useRouter } from 'next/router'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
-import styles from './ThesisId.module.css'
+import styles from './RequestId.module.css'
+import { MdDoneOutline } from 'react-icons/md'
 
-function ThesisPage({ category = 'student' }) {
+function RequestPage({ category = 'teacher' }) {
   const router = useRouter()
-  const thesisId = router.query.thesisId
+  const requestId = router.query.requestId
   // On First Render, the page will make an api call to database
   // and will get the info of the particular thesis
   return (
     <div className='main_ctn' style={{ position: 'relative' }}>
-      <h1 className={styles.header}>Πληροφοριές Διπλωματικής</h1>
+      <h1 className={styles.header}>Πληροφοριές Αίτησης</h1>
 
       <div className={styles.box_ctn}>
         <AiOutlineArrowLeft
@@ -33,6 +34,17 @@ function ThesisPage({ category = 'student' }) {
           </a>
         </div>
         <div className={styles.same_line}>
+          <h2>Όνομα φοιτητή:</h2>{' '}
+          <p style={{ width: '250px' }}> Κωνσταντίνος Τριπαλιτάκης</p>
+        </div>
+        <div className={styles.same_line}>
+          <h2>Αριθμός Μητρώου:</h2> <p style={{ width: '250px' }}> 03114818</p>
+        </div>
+        <div className={styles.same_line}>
+          <h2>Email φοιτητή:</h2>{' '}
+          <p style={{ width: '250px' }}> ktrip96@gmail.com</p>
+        </div>
+        <div className={styles.same_line}>
           <h2>Συσχετιζόμενο μάθημα:</h2>{' '}
           <a
             href='https://www.ece.ntua.gr/gr/undergraduate/diploma/217'
@@ -44,6 +56,20 @@ function ThesisPage({ category = 'student' }) {
             Λειτουργικά Συστήματα Υπολογιστών
           </a>
         </div>
+        <div className={styles.same_line}>
+          <h2>Status:</h2>{' '}
+          <div
+            style={{
+              display: 'flex',
+              color: 'var(--green-color)',
+              gap: '10px',
+            }}
+          >
+            {' '}
+            Accepted <MdDoneOutline size={20} />{' '}
+          </div>
+        </div>
+
         <h2>Περιγραφή</h2>
         <p>
           Το RNA είναι απαραίτητο για διάφορες βιολογικές διεργασίες, από τη
@@ -55,8 +81,7 @@ function ThesisPage({ category = 'student' }) {
           περιορίζεται από το μήκος του RNA. Μια βασική δομή του RNA είναι αυτή
           του ψευδοκόμβου (pseudoknot).
         </p>
-        <h2>Επιπρόσθετες πληροφορίες</h2>
-        <p>Εδώ θα μπεί το html text που θα λαμβάνουμε από τον κάθε καθηγητή</p>
+
         <h2>Επικοινωνία</h2>
         <p>
           Παυλάτος Χρήστος pavlatosc@gmail.com Γραφείο 0.0.3 στο Κτήριο
@@ -64,19 +89,16 @@ function ThesisPage({ category = 'student' }) {
         </p>
       </div>
 
-      {category === 'student' ? (
+      {category !== 'student' && (
         <div className={styles.button_container}>
-          <button className={[styles.button, styles.apply].join(' ')}>
-            Αίτηση
-          </button>
-        </div>
-      ) : (
-        <div className={styles.button_container}>
-          <button className={[styles.button, styles.edit].join(' ')} id='edit'>
-            Eπεξεργασία
+          <button
+            className={[styles.button, styles.accept].join(' ')}
+            id='edit'
+          >
+            Αποδοχή
           </button>
           <button className={[styles.button, styles.delete].join(' ')}>
-            Διαγραφή
+            Απόρριψη
           </button>
         </div>
       )}
@@ -84,4 +106,4 @@ function ThesisPage({ category = 'student' }) {
   )
 }
 
-export default ThesisPage
+export default RequestPage

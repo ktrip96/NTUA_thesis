@@ -27,6 +27,7 @@ function Grid({ category, data }) {
         {data.map((item) => (
           <RequestBox
             key={item.id}
+            id={item.id}
             title={item.name}
             path={item.path}
             status={item.status}
@@ -40,6 +41,7 @@ function Grid({ category, data }) {
         {data.map((item) => (
           <ApprovalBox
             key={item.id}
+            id={item.id}
             title={item.name}
             path={item.path}
             status={item.status}

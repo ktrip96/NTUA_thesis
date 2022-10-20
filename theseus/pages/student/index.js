@@ -3,7 +3,6 @@ import PageMenu from '../../components/PageMenu'
 import SearchBar from '../../components/SearchBar'
 import styles from './index.module.css'
 import Header from '../../components/Header'
-import ProjectList from '../../components/ProjectList'
 import Grid from '../../components/Grid'
 import { getSearchbarData } from '../../dummy_data'
 
