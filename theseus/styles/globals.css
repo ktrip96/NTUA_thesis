@@ -1,4 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Inter&display=swap');
+
+
 html,
 body {
   padding: 0;
